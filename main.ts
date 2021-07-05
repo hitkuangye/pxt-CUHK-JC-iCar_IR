@@ -1,13 +1,6 @@
 /** 
- * @file pxt-yfrobot-valon/valon.ts
- * @brief YFROBOT's VALON makecode library.
- * @n This is a MakeCode graphical programming education robot.
- * 
- * @copyright    YFROBOT,2020
- * @copyright    MIT Lesser General Public License
- * 
- * @author [email](yfrobot@qq.com)
- * @date  2020-07-22
+ * @file pxt-CUHK-JC-iCar_IR.ts
+ * @date  2021-07-05
 */
 
 // ultrasonic pin
@@ -32,7 +25,7 @@ enum PingUnit {
 }
 
 //% color="#7BD239" weight=10 icon="\uf1b0"
-namespace valon {
+namespace CUHK-JC-iCar_IR {
 
     // IR
     const MICROBIT_MAKERBIT_IR_NEC = 777
@@ -160,27 +153,23 @@ namespace valon {
     }
 
     export enum IrButton {
-        // any button
-        //% block="Any"
-        Any = -1,
-
         //IR HANDLE
-        //% block="↑"
-        UP = 0x18,
-        //% block="↓"
-        DOWN = 0x4a,
-        //% block="←"
-        LEFT = 0x10,
-        //% block="→"
-        RIGHT = 0x5a,
-        //% block="OK"
-        M1 = 0x38,
         //% block="*"
         M2 = 0x68,
+        //% block="↑"
+        UP = 0x18,
         //% block="#"
         A = 0xB0,
+        //% block="←"
+        LEFT = 0x10,
+        //% block="OK"
+        M1 = 0x38,
+        //% block="→"
+        RIGHT = 0x5a,
         //% block="0"
         Number_0 = 0x98,
+        //% block="↓"
+        DOWN = 0x4a,
         //% block="1"
         Number_1 = 0xa2,
         //% block="2"
@@ -194,11 +183,14 @@ namespace valon {
         //% block="6"
         Number_6 = 0xc2,
         //% block="7"
-        Number_7 = 0xf4,
+        Number_7 = 0xe0,
         //% block="8"
         Number_8 = 0xa8,
         //% block="9"
         Number_9 = 0x90,
+        // any button
+        //% block="Any"
+        Any = -1,
     }
 
     /***************** IR *******************/
