@@ -25,7 +25,7 @@ enum PingUnit {
 }
 
 //% color="#7BD239" weight=10 icon="\uf1b0"
-namespace CUHK-JC-iCar_IR {
+namespace CUHK_IR {
 
     // IR
     const MICROBIT_MAKERBIT_IR_NEC = 777
