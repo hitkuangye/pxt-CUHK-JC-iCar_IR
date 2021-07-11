@@ -4,7 +4,7 @@
 */
 
 //% color="#7BD239" weight=10 icon="\uf1b0"
-namespace CUHK_IR_V2 {
+namespace Mbit_IR {
 
     // IR
     const MICROBIT_MAKERBIT_IR_NEC = 777
