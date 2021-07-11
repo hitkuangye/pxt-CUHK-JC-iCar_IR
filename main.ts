@@ -3,27 +3,6 @@
  * @date  2021-07-05
 */
 
-// ultrasonic pin
-let valonUltrasonicTrig = DigitalPin.P5
-let valonUltrasonicEcho = DigitalPin.P11
-let distanceBuf = 0
-// motor pin 
-let valonMotorLD = DigitalPin.P13
-let valonMotorLA = AnalogPin.P14
-let valonMotorRD = DigitalPin.P15
-let valonMotorRA = AnalogPin.P16
-// patrol pin
-let valonPatrolLeft = DigitalPin.P1
-let valonPatrolMiddle = DigitalPin.P2
-let valonPatrolRight = DigitalPin.P8
-// rgbled pin
-let valonEyesPin = DigitalPin.P11
-
-enum PingUnit {
-    //% block="cm"
-    Centimeters,
-}
-
 //% color="#7BD239" weight=10 icon="\uf1b0"
 namespace CUHK_IR {
 
@@ -41,100 +20,6 @@ namespace CUHK_IR {
         hasNewCommand: boolean;
         bitsReceived: uint8;
         commandBits: uint8;
-    }
-
-    export enum Motors {
-        //% blockId="leftMotor" block="left"
-        ML = 0,
-        //% blockId="rightMotor" block="right"
-        MR = 1,
-        //% blockId="allMotors" block="all"
-        MAll = 2
-    }
-
-    export enum Dir {
-        //% blockId="CW" block="Forward"
-        CW = 0x0,
-        //% blockId="CCW" block="Backward"
-        CCW = 0x1
-    }
-
-    export enum PatrolEnable {
-        //% blockId="PatrolOn" block="ON"
-        PatrolOn = 0x01,
-        //% blockId="PatrolOff" block="OFF"
-        PatrolOff = 0x00
-    }
-
-    export enum Patrol {
-        //% blockId="patrolLeft" block="left"
-        PatrolLeft = 1,
-        //% blockId="patrolMiddle" block="middle"
-        PatrolMiddle = 2,
-        //% blockId="patrolRight" block="right"
-        PatrolRight = 8
-    }
-
-    export enum LED {
-        //% blockId="LEDLeft" block="left"
-        LEDLeft = 10,
-        //% blockId="LEDRight" block="right"
-        LEDRight = 9,
-        //% blockId="LEDAll" block="all"
-        LEDAll = 0
-    }
-
-    export enum LEDswitch {
-        //% blockId="turnOn" block="ON"
-        turnOn = 0x01,
-        //% blockId="turnOff" block="OFF"
-        turnOff = 0x00
-    }
-
-    /**
-     * Different modes for RGB or RGB+W NeoPixel strips
-     */
-    export enum EyesMode {
-        //% block="GRB"
-        RGB = 1,
-        //% block="RGB"
-        RGB_RGB = 3,
-        //% block="RGB+W"
-        RGBW = 2
-    }
-
-    export enum RGBEYES {
-        //% blockId="RGBLEDLeft" block="left"
-        EyesLeft = 1,
-        //% blockId="RGBLEDLeft" block="right"
-        EyesRight = 0,
-        //% blockId="RGBLEDLeft" block="all"
-        EyesAll = 2
-    }
-    /**
-     * Pre-Defined LED colours
-     */
-    export enum EyesColors {
-        //% block=red
-        Red = 0xff0000,
-        //% block=orange
-        Orange = 0xffa500,
-        //% block=yellow
-        Yellow = 0xffff00,
-        //% block=green
-        Green = 0x00ff00,
-        //% block=blue
-        Blue = 0x0000ff,
-        //% block=indigo
-        Indigo = 0x4b0082,
-        //% block=violet
-        Violet = 0x8a2be2,
-        //% block=purple
-        Purple = 0xff00ff,
-        //% block=white
-        White = 0xffffff,
-        //% block=black
-        Black = 0x000000
     }
 
     // IR
